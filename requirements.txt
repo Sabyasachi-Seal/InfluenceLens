@@ -1,0 +1,9 @@
+pandas
+llama-index
+langchain-google-genai
+langchain
+fastapi
+pydantic
+uvicorn
+llama-index-embeddings-gemini
+dotenv
