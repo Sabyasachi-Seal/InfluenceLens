@@ -6,4 +6,5 @@ fastapi
 pydantic
 uvicorn
 llama-index-embeddings-gemini
-dotenv
+
+python-dotenv
