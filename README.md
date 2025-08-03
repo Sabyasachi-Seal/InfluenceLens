@@ -3,8 +3,6 @@
 ## Overview
 The **Influencer Content Review** application is a backend service designed to streamline the review of influencer content submissions (e.g., video topics, draft scripts) against brand briefs for marketing campaigns. It ensures content aligns with campaign goals and brand safety, providing structured feedback on strengths, areas for improvement, and suggestions. The app also generates random brand briefs and submissions for testing or inspiration. Built as a FastAPI application, it processes campaign data from a CSV file and uses Google’s Gemini models for embeddings and language tasks, making it efficient for influencer marketing workflows.
 
-The project is developed as of August 3, 2025, and is intended for influencers and brand managers working with campaigns, such as those for brands like Milanote.
-
 ## Features
 - **Review Submission**: Submit a `campaignId` and content (text) to receive detailed feedback based on the corresponding brand brief.
 - **List Campaigns**: Retrieve a list of all unique campaign IDs from the dataset.
