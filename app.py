@@ -8,8 +8,11 @@ import uvicorn
 from contextlib import asynccontextmanager
 import dotenv
 from utils.ContentReviewApp import ContentReviewApp
-from consts import AppError, ModelConfig
+from consts.consts import AppError, ModelConfig
 from models.submission_models import  SubmissionRequest
+from fastapi.middleware.cors import CORSMiddleware
+from consts.consts import CorsConfig
+
 
 dotenv.load_dotenv()
 
@@ -26,6 +29,13 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(lifespan=lifespan)
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=CorsConfig.CORSMIDDLEWARE_ALLOW_ORIGINS,
+    allow_credentials=CorsConfig.CORSMIDDLEWARE_ALLOW_CREDENTIALS,
+    allow_methods=CorsConfig.CORSMIDDLEWARE_ALLOW_METHODS,
+    allow_headers=CorsConfig.CORSMIDDLEWARE_ALLOW_HEADERS,
+)
 
 @app.post("/review_submission")
 async def review_submission_endpoint(request: SubmissionRequest):

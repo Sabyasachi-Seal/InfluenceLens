@@ -8,7 +8,7 @@ from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
 import uuid
 from typing import Dict, List
-from consts import ModelConfig
+from consts.consts import ModelConfig
 
 class ContentReviewApp:
     def __init__(self, csv_path: str, storage_path: str = "./storage"):
